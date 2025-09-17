@@ -10,108 +10,51 @@
       --ink: #0b0f19;
       --muted: #5b6578;
       --border: #e3e8ef;
-      --theme: #98bcc5;       /* requested theme color */
-      --theme-ink: #0b2a2f;   /* darker text for contrast on themed accents */
+      --theme: #98bcc5;
+      --theme-ink: #0b2a2f;
       --radius: 16px;
     }
-
-    /* Typography: Helvetica for all; bold titles */
     html, body { height: 100%; }
     body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--ink);
+      margin: 0; background: var(--bg); color: var(--ink);
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
     }
-    h1, h2, h3 { font-weight: 700; margin: 0 0 10px; }
-    h1 { font-size: 32px; }
-    h2 { font-size: 24px; }
-    h3 { font-size: 18px; }
+    h1,h2,h3 { font-weight: 700; margin: 0 0 10px; }
+    h1 { font-size: 32px; } h2 { font-size: 24px; } h3 { font-size: 18px; }
     p, li { line-height: 1.5; }
-
-    /* Layout */
     .container { width: min(1050px, 100%); margin: 0 auto; padding: 24px; }
-    .card {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 16px;
-      box-shadow: 0 8px 20px rgba(16, 24, 40, 0.06);
-    }
-    .space { height: 16px; }
-    .muted { color: var(--muted); font-size: 14px; }
-
-    /* Top nav */
-    .topbar-wrap { background: #ffffff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 10; }
-    .topbar {
-      display: flex; align-items: center; justify-content: space-between; gap: 12px;
-      width: min(1050px, 100%); margin: 0 auto; padding: 12px 24px;
-    }
-    .brand { display: flex; align-items: center; gap: 10px; }
-    .brand .dot { width: 12px; height: 12px; background: var(--theme); border-radius: 999px; border: 1px solid #6fa0ab; }
-    .brand h1 { font-size: 22px; margin: 0; }
-
-    .menu { display: flex; gap: 8px; flex-wrap: wrap; }
-    .menu a {
-      text-decoration: none; color: var(--ink); padding: 8px 12px; border-radius: 12px; border: 1px solid transparent;
-      font-weight: 600;
-    }
-    .menu a.active, .menu a:hover {
-      background: var(--theme); border-color: #6fa0ab; color: var(--theme-ink);
-      transition: background .15s ease, color .15s ease, border .15s ease;
-    }
-
-    /* Buttons + inputs */
-    input, button, select, textarea {
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: 16px;
-    }
-    input {
-      background: #fff; color: var(--ink); border: 1px solid var(--border);
-      border-radius: 10px; padding: 10px 12px; outline: none; width: 100%;
-    }
-    button {
-      background: var(--theme); color: var(--theme-ink); border: 1px solid #6fa0ab;
-      border-radius: 12px; padding: 10px 14px; font-weight: 700; cursor: pointer;
-    }
-    button:disabled { opacity: .6; cursor: not-allowed; }
-
-    /* Table */
-    table { width: 100%; border-collapse: collapse; }
-    th, td { padding: 12px; border-bottom: 1px solid var(--border); text-align: left; }
-    th { font-weight: 700; font-size: 14px; color: var(--muted); }
-    td { font-size: 16px; }
-    .right { text-align: right; }
-
-    .pill {
-      font-size: 12px; padding: 4px 8px; border-radius: 999px; background: #eef6f8; border: 1px solid #cbe2e7; color: #2b4650;
-    }
-    .row { display: flex; gap: 12px; align-items: center; }
-    .row-stretch { display: flex; gap: 12px; align-items: stretch; }
-    .error { color: #b42318; font-size: 14px; }
-
-    /* Pages */
-    .page { display: none; }
-    .page.active { display: block; }
-
-    /* Content helpers */
-    .prose p { margin: 0 0 10px; }
-    .list-tight li { margin: 6px 0; }
-
-    /* Footer */
-    footer { border-top: 1px solid var(--border); margin-top: 24px; padding-top: 16px; color: var(--muted); font-size: 14px; }
+    .card { background:#fff; border:1px solid var(--border); border-radius:var(--radius); padding:16px; box-shadow:0 8px 20px rgba(16,24,40,.06); }
+    .space{height:16px;} .muted{color:var(--muted);font-size:14px;}
+    .topbar-wrap{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10;}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;width:min(1050px,100%);margin:0 auto;padding:12px 24px;}
+    .brand{display:flex;align-items:center;gap:10px;}
+    .brand .dot{width:12px;height:12px;background:var(--theme);border-radius:999px;border:1px solid #6fa0ab;}
+    .brand h1{font-size:22px;margin:0;}
+    .menu{display:flex;gap:8px;flex-wrap:wrap;}
+    .menu a{text-decoration:none;color:var(--ink);padding:8px 12px;border-radius:12px;border:1px solid transparent;font-weight:600;}
+    .menu a.active,.menu a:hover{background:var(--theme);border-color:#6fa0ab;color:var(--theme-ink);transition:background .15s ease,color .15s ease,border .15s ease;}
+    input,button,select,textarea{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:16px;}
+    input,select{background:#fff;color:var(--ink);border:1px solid var(--border);border-radius:10px;padding:10px 12px;outline:none;}
+    button{background:var(--theme);color:var(--theme-ink);border:1px solid #6fa0ab;border-radius:12px;padding:10px 14px;font-weight:700;cursor:pointer;}
+    button:disabled{opacity:.6;cursor:not-allowed;}
+    table{width:100%;border-collapse:collapse;}
+    th,td{padding:12px;border-bottom:1px solid var(--border);text-align:left;}
+    th{font-weight:700;font-size:14px;color:var(--muted);} td{font-size:16px;} .right{text-align:right;}
+    .pill{font-size:12px;padding:4px 8px;border-radius:999px;background:#eef6f8;border:1px solid #cbe2e7;color:#2b4650;}
+    .row{display:flex;gap:12px;align-items:center;} .row-stretch{display:flex;gap:12px;align-items:stretch;flex-wrap:wrap;}
+    .error{color:#b42318;font-size:14px;}
+    .page{display:none;} .page.active{display:block;}
+    .prose p{margin:0 0 10px;} .list-tight li{margin:6px 0;}
+    footer{border-top:1px solid var(--border);margin-top:24px;padding-top:16px;color:var(--muted);font-size:14px;}
+    /* small helpers */
+    .w-200{min-width:200px;} .w-260{min-width:260px;} .grow{flex:1 1 auto;}
   </style>
 </head>
 <body>
-  <!-- Top Navigation -->
   <div class="topbar-wrap">
     <div class="topbar">
-      <div class="brand">
-        <div class="dot"></div>
-        <h1>Team Leaderboard</h1>
-      </div>
+      <div class="brand"><div class="dot"></div><h1>Team Leaderboard</h1></div>
       <nav class="menu" id="menu">
         <a href="#home" data-page="home" class="active">Home</a>
         <a href="#incentive" data-page="incentive">Incentive</a>
@@ -122,68 +65,79 @@
   </div>
 
   <div class="container">
-    <!-- AUTH STATUS (shown on Home only) -->
-    <div id="auth-status" class="row muted" style="justify-content:flex-end; display:none;"></div>
+    <div id="auth-status" class="row muted" style="justify-content:flex-end;display:none;"></div>
 
-    <!-- ========== HOME (Leaderboard + Auth) ========== -->
+    <!-- HOME -->
     <section id="page-home" class="page active">
       <div class="card" id="leaderboard-card">
         <h2>Leaderboard</h2>
-        <table id="board">
-          <thead>
-            <tr><th>#</th><th>Team</th><th class="right">Total</th></tr>
-          </thead>
-          <tbody id="board-body"></tbody>
-        </table>
-        <div class="space"></div>
-        <div class="muted">Updates in real time.</div>
+        <table id="board"><thead><tr><th>#</th><th>Team</th><th class="right">Total</th></tr></thead><tbody id="board-body"></tbody></table>
+        <div class="space"></div><div class="muted">Updates in real time.</div>
       </div>
 
       <div class="space"></div>
 
-      <div class="row-stretch" style="flex-wrap:wrap;">
+      <div class="row-stretch">
         <!-- Login -->
         <div class="card" id="login-card" style="flex:1 1 420px;">
           <h3>Sign in to add to your team’s total</h3>
           <div class="space"></div>
-          <div class="row" style="align-items:flex-start; gap:12px;">
-            <input id="email" type="email" placeholder="email@example.com" />
-            <input id="password" type="password" placeholder="password" />
+          <div class="row" style="align-items:flex-start;">
+            <input id="email" class="w-260" type="email" placeholder="email@example.com" />
+            <input id="password" class="w-200" type="password" placeholder="password" />
             <button id="login-btn">Log in</button>
           </div>
           <div id="login-error" class="error" style="margin-top:8px;"></div>
-          <div class="space"></div>
-          <div class="muted">Accounts are pre-created by admins.</div>
+          <div class="space"></div><div class="muted">Accounts are pre-created by admins.</div>
         </div>
 
-        <!-- Add dollars -->
-        <div class="card" id="add-card" style="display:none; flex:1 1 420px;">
-          <div class="row" style="justify-content:space-between;">
-            <h3>Add to Team Total</h3>
-            <button id="logout-btn" title="Sign out">Log out</button>
-          </div>
+        <!-- Add for member -->
+        <div class="card" id="add-card" style="display:none;flex:1 1 420px;">
+          <div class="row" style="justify-content:space-between;"><h3>Add to Team Total</h3><button id="logout-btn">Log out</button></div>
           <div class="space"></div>
-          <div class="row" style="justify-content:space-between;">
-            <span class="pill" id="team-pill">Team: —</span>
-          </div>
+          <div class="row" style="justify-content:space-between;"><span class="pill" id="team-pill">Team: —</span></div>
           <div class="space"></div>
-          <div class="row" style="gap:12px;">
-            <input id="amount" type="number" min="1" step="0.01" placeholder="Amount in USD" />
+          <div class="row">
+            <input id="amount" class="grow" type="number" min="1" step="0.01" placeholder="Amount in USD" />
             <button id="add-btn">Add</button>
           </div>
           <div id="add-error" class="error" style="margin-top:8px;"></div>
-          <div class="muted" style="margin-top:8px;">Only positive amounts allowed. Access is enforced by database policies.</div>
+          <div class="muted" style="margin-top:8px;">Positive amounts only. Access is enforced by database policies.</div>
         </div>
+      </div>
+
+      <div class="space"></div>
+
+      <!-- ADMIN PANEL (visible only to admins) -->
+      <div class="card" id="admin-card" style="display:none;">
+        <div class="row" style="justify-content:space-between;">
+          <h3>Admin: Adjust Any Team</h3>
+          <span class="muted">All adjustments are logged.</span>
+        </div>
+        <div class="space"></div>
+        <div class="row" style="flex-wrap:wrap;">
+          <select id="admin-team" class="w-260"></select>
+          <input id="admin-amount" class="w-200" type="number" step="0.01" placeholder="Amount in USD (use negative to subtract)" />
+          <input id="admin-reason" class="grow" type="text" placeholder="Reason (optional)" />
+          <button id="admin-apply">Apply</button>
+        </div>
+        <div id="admin-error" class="error" style="margin-top:8px;"></div>
+
+        <div class="space"></div>
+        <h3>Recent Adjustments</h3>
+        <table id="tx-table">
+          <thead><tr><th>When</th><th>Team</th><th>User</th><th class="right">Amount</th><th>Reason</th></tr></thead>
+          <tbody id="tx-body"><tr><td colspan="5" class="muted">No data</td></tr></tbody>
+        </table>
       </div>
     </section>
 
-    <!-- ========== INCENTIVE PAGE ========== -->
+    <!-- INCENTIVE -->
     <section id="page-incentive" class="page">
       <div class="card">
         <h2>Incentive for the Winning Team</h2>
         <div class="space"></div>
         <div class="prose">
-          <!-- 👉 Replace this content with your real incentive details -->
           <p><strong>What teams win:</strong> [Describe prize / recognition / grant / event].</p>
           <ul class="list-tight">
             <li>Eligibility: [criteria]</li>
@@ -195,64 +149,51 @@
       </div>
     </section>
 
-    <!-- ========== FUNDRAISING TIPS PAGE ========== -->
+    <!-- TIPS -->
     <section id="page-tips" class="page">
       <div class="card">
         <h2>Fundraising Tips</h2>
         <div class="space"></div>
-        <!-- 👉 Insert articles here. You can duplicate <article> blocks. -->
-        <article class="prose" style="border-top:1px solid var(--border); padding-top:12px;">
+        <article class="prose" style="border-top:1px solid var(--border);padding-top:12px;">
           <h3>Article Title Placeholder</h3>
           <p>[Intro/summary paragraph goes here.]</p>
-          <ul class="list-tight">
-            <li>Tip #1 …</li>
-            <li>Tip #2 …</li>
-            <li>Tip #3 …</li>
-          </ul>
+          <ul class="list-tight"><li>Tip #1 …</li><li>Tip #2 …</li><li>Tip #3 …</li></ul>
         </article>
-
-        <article class="prose" style="border-top:1px solid var(--border); padding-top:12px;">
+        <article class="prose" style="border-top:1px solid var(--border);padding-top:12px;">
           <h3>Another Article Title</h3>
-          <p>[Add content.]</p>
+          <p>[Add your content or link out.]</p>
         </article>
-
-        <div class="space"></div>
-        <div class="muted">Add or remove <code>&lt;article&gt;</code> blocks as needed.</div>
+        <div class="space"></div><div class="muted">Add or remove <code>&lt;article&gt;</code> blocks as needed.</div>
       </div>
     </section>
 
-    <!-- ========== MISSION PAGE ========== -->
+    <!-- MISSION -->
     <section id="page-mission" class="page">
       <div class="card">
         <h2>Our Mission</h2>
         <div class="space"></div>
         <div class="prose">
-          <!-- 👉 Replace with your mission statement -->
-          <p>
-            [Insert mission statement here.]
-          </p>
+          <p>[Insert your organization’s mission statement here.]</p>
         </div>
       </div>
     </section>
 
-    <footer class="container">
-      <div class="muted">© <span id="year"></span> Team Leaderboard</div>
-    </footer>
+    <footer class="container"><div class="muted">© <span id="year"></span> Team Leaderboard</div></footer>
   </div>
 
-  <!-- Supabase client + App logic -->
   <script type="module">
     import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
-    // ====== Configure Supabase ======
-    const SUPABASE_URL = "https://sjhlxejgrnhslbunjvyc.supabase.co";
-    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNqaGx4ZWpncm5oc2xidW5qdnljIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTc5Njk5MDYsImV4cCI6MjA3MzU0NTkwNn0.YrFBgLhcdho7aLv1vrrYPqAJ2rGm-Zn3SKLkGgyvpJ8";
+    // === Configure Supabase ===
+    const SUPABASE_URL = "YOUR_SUPABASE_URL";
+    const SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY";
     const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
       auth: { persistSession: true, autoRefreshToken: true }
     });
 
-    // ====== Helpers ======
+    // === DOM refs ===
     const $ = (id) => document.getElementById(id);
+    const authStatus = $("auth-status");
     const boardBody = $("board-body");
     const loginCard = $("login-card");
     const addCard = $("add-card");
@@ -260,8 +201,13 @@
     const loginBtn = $("login-btn");
     const logoutBtn = $("logout-btn");
     const addBtn = $("add-btn");
-    const authStatus = $("auth-status");
-    const yearSpan = $("year");
+    const adminCard = $("admin-card");
+    const adminTeamSel = $("admin-team");
+    const adminAmount = $("admin-amount");
+    const adminReason = $("admin-reason");
+    const adminApply = $("admin-apply");
+    const txBody = $("tx-body");
+    $("year").textContent = new Date().getFullYear();
 
     let myTeamId = null;
 
@@ -269,142 +215,154 @@
       new Intl.NumberFormat(undefined, { style: "currency", currency: "USD" })
         .format((cents ?? 0) / 100);
 
+    // === Leaderboard ===
     async function loadBoard() {
       const { data, error } = await supabase
-        .from("teams")
-        .select("id,name,total_cents")
-        .order("total_cents", { ascending: false })
-        .limit(100);
-
-      if (error) {
-        console.error(error);
-        boardBody.innerHTML = `<tr><td colspan="3" class="error">Failed to load leaderboard</td></tr>`;
-        return;
-      }
-
-      boardBody.innerHTML = data.map((t, i) =>
-        `<tr>
-          <td>${i + 1}</td>
-          <td>${t.name}</td>
-          <td class="right">${fmtUSD(t.total_cents)}</td>
-        </tr>`
-      ).join("");
+        .from("teams").select("id,name,total_cents")
+        .order("total_cents", { ascending: false }).limit(100);
+      if (error) { console.error(error); boardBody.innerHTML = `<tr><td colspan="3" class="error">Failed to load leaderboard</td></tr>`; return; }
+      boardBody.innerHTML = data.map((t,i)=>`<tr><td>${i+1}</td><td>${t.name}</td><td class="right">${fmtUSD(t.total_cents)}</td></tr>`).join("");
     }
-
     function subscribeRealtime() {
       supabase.channel('teams-changes')
         .on('postgres_changes', { event: '*', schema: 'public', table: 'teams' }, loadBoard)
         .subscribe();
     }
 
+    // === Auth + membership ===
+    async function isAdmin(userId) {
+      const { data, error } = await supabase.from("admins").select("user_id").eq("user_id", userId).maybeSingle();
+      return !error && !!data;
+    }
     async function refreshAuthUI() {
       const { data: { user } } = await supabase.auth.getUser();
 
-      // Only show auth status on Home page
       authStatus.style.display = isCurrentPage('home') ? "flex" : "none";
-      authStatus.innerHTML = user
-        ? `<span>Signed in as <strong>${user.email}</strong></span>`
-        : `<span>Viewing as guest</span>`;
+      authStatus.innerHTML = user ? `<span>Signed in as <strong>${user.email}</strong></span>` : `<span>Viewing as guest</span>`;
 
       loginCard.style.display = user ? "none" : "block";
       addCard.style.display = user ? "block" : "none";
 
       if (user) {
         const { data: membership, error } = await supabase
-          .from("team_members")
-          .select("team_id, teams(name)")
-          .eq("user_id", user.id)
-          .limit(1)
-          .maybeSingle();
+          .from("team_members").select("team_id, teams(name)").eq("user_id", user.id).limit(1).maybeSingle();
 
         if (error || !membership) {
           $("add-error").textContent = error?.message || "No team assigned. Contact admin.";
-          myTeamId = null;
-          teamPill.textContent = "Team: —";
-          addBtn.disabled = true;
+          myTeamId = null; teamPill.textContent = "Team: —"; addBtn.disabled = true;
         } else {
-          myTeamId = membership.team_id;
-          teamPill.textContent = `Team: ${membership.teams.name}`;
-          addBtn.disabled = false;
+          myTeamId = membership.team_id; teamPill.textContent = `Team: ${membership.teams.name}`; addBtn.disabled = false;
+        }
+
+        // Admin controls
+        if (await isAdmin(user.id)) {
+          adminCard.style.display = "block";
+          await loadTeamsForAdmin();
+          await loadTransactions();
+        } else {
+          adminCard.style.display = "none";
         }
       } else {
         myTeamId = null;
+        adminCard.style.display = "none";
       }
     }
 
-    // ====== Auth actions ======
+    // === Member actions ===
     loginBtn?.addEventListener("click", async () => {
       $("login-error").textContent = "";
-      const email = $("email").value.trim();
-      const password = $("password").value;
+      const email = $("email").value.trim(), password = $("password").value;
       loginBtn.disabled = true;
       const { error } = await supabase.auth.signInWithPassword({ email, password });
       loginBtn.disabled = false;
       if (error) $("login-error").textContent = error.message;
       await refreshAuthUI();
     });
-
-    logoutBtn?.addEventListener("click", async () => {
-      await supabase.auth.signOut();
-      await refreshAuthUI();
-    });
-
+    logoutBtn?.addEventListener("click", async () => { await supabase.auth.signOut(); await refreshAuthUI(); });
     addBtn?.addEventListener("click", async () => {
       $("add-error").textContent = "";
-      const amountStr = $("amount").value;
-      const amount = parseFloat(amountStr);
-      if (!myTeamId) {
-        $("add-error").textContent = "No team assigned to your account.";
-        return;
-      }
-      if (!(amount > 0)) {
-        $("add-error").textContent = "Enter a positive dollar amount.";
-        return;
-      }
+      const amount = parseFloat($("amount").value);
+      if (!myTeamId) { $("add-error").textContent = "No team assigned to your account."; return; }
+      if (!(amount > 0)) { $("add-error").textContent = "Enter a positive dollar amount."; return; }
       addBtn.disabled = true;
       const cents = Math.round(amount * 100);
       const { error } = await supabase.rpc("increment_team_total", { p_team_id: myTeamId, p_amount_cents: cents });
       addBtn.disabled = false;
-      if (error) {
-        $("add-error").textContent = error.message;
-      } else {
-        $("amount").value = "";
-        loadBoard(); // realtime will also update
-      }
+      if (error) $("add-error").textContent = error.message; else { $("amount").value = ""; loadBoard(); }
     });
 
-    // ====== Simple router (hash-based) ======
-    const pages = ["home", "incentive", "tips", "mission"];
-    const pageEls = Object.fromEntries(pages.map(p => [p, document.getElementById(`page-${p}`)]));
-
-    function isCurrentPage(p) { return location.hash.replace('#','') === p || (!location.hash && p === 'home'); }
-
-    function showPage(page) {
-      pages.forEach(p => {
-        pageEls[p].classList.toggle("active", p === page);
-        const link = document.querySelector(`.menu a[data-page="${p}"]`);
-        if (link) link.classList.toggle("active", p === page);
-      });
-      // Home-only elements:
-      authStatus.style.display = page === 'home' ? "flex" : "none";
+    // === Admin helpers ===
+    async function loadTeamsForAdmin() {
+      const { data, error } = await supabase.from("teams").select("id,name").order("name");
+      if (error) { console.error(error); return; }
+      adminTeamSel.innerHTML = data.map(t => `<option value="${t.id}">${t.name}</option>`).join("");
     }
+    async function loadTransactions() {
+      // Show the 25 most recent adjustments, with names
+      const { data, error } = await supabase
+        .from("team_transactions")
+        .select("created_at, amount_cents, reason, team_id, user_id")
+        .order("created_at", { ascending: false })
+        .limit(25);
+      if (error) { console.error(error); return; }
 
-    function route() {
+      // fetch names for mapping
+      const teamMap = new Map();
+      const userMap = new Map();
+      // teams
+      const { data: teams } = await supabase.from("teams").select("id,name");
+      teams?.forEach(t => teamMap.set(t.id, t.name));
+      // quick user lookup via admin-only info: we can't join auth.users from client; just show user_id short
+      txBody.innerHTML = (data?.length ? data : []).map(row => {
+        const teamName = teamMap.get(row.team_id) ?? row.team_id;
+        const userShort = String(row.user_id).slice(0,8) + "…";
+        const when = new Date(row.created_at).toLocaleString();
+        const amt = fmtUSD(row.amount_cents);
+        const reason = row.reason ? row.reason.replace(/</g,"&lt;") : "";
+        return `<tr><td>${when}</td><td>${teamName}</td><td>${userShort}</td><td class="right">${amt}</td><td>${reason}</td></tr>`;
+      }).join("") || `<tr><td colspan="5" class="muted">No data</td></tr>`;
+    }
+    adminApply?.addEventListener("click", async () => {
+      $("admin-error").textContent = "";
+      const teamId = adminTeamSel.value;
+      const amt = parseFloat(adminAmount.value);
+      if (!teamId) return;
+      if (!amt || amt === 0) { $("admin-error").textContent = "Enter a non-zero amount (use negative to subtract)."; return; }
+      adminApply.disabled = true;
+      const cents = Math.round(amt * 100);
+      const { error } = await supabase.rpc("admin_adjust_team_total", {
+        p_team_id: teamId, p_amount_cents: cents, p_reason: adminReason.value?.trim() || null
+      });
+      adminApply.disabled = false;
+      if (error) { $("admin-error").textContent = error.message; }
+      else { adminAmount.value=""; adminReason.value=""; await loadBoard(); await loadTransactions(); }
+    });
+
+    // === Router ===
+    const pages = ["home","incentive","tips","mission"];
+    const pageEls = Object.fromEntries(pages.map(p => [p, document.getElementById(`page-${p}`)]));
+    function isCurrentPage(p){ return location.hash.replace('#','')===p || (!location.hash && p==='home'); }
+    function showPage(page){
+      pages.forEach(p=>{
+        pageEls[p].classList.toggle("active", p===page);
+        const link = document.querySelector(`.menu a[data-page="${p}"]`);
+        if (link) link.classList.toggle("active", p===page);
+      });
+      authStatus.style.display = page==='home' ? "flex" : "none";
+    }
+    function route(){
       const h = (location.hash || "#home").slice(1);
       if (!pages.includes(h)) location.hash = "#home";
       showPage(h);
-      // Refresh auth status when coming back to Home
-      if (h === 'home') refreshAuthUI();
+      if (h==='home') refreshAuthUI();
     }
-
     window.addEventListener("hashchange", route);
 
-    // ====== Init ======
-    (async function init() {
-      yearSpan.textContent = new Date().getFullYear();
+    // === Init ===
+    (async function init(){
       await loadBoard();
       subscribeRealtime();
-      route();         // set initial page
+      route();
       await refreshAuthUI();
     })();
   </script>
